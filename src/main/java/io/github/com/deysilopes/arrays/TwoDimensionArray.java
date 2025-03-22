@@ -1,24 +1,29 @@
 package io.github.com.deysilopes.arrays;
 
-import java.util.Arrays;
-
 public class TwoDimensionArray {
-    public static void main(String[] args) {
-        // Declara
-        int[][] arr2Dint;
-        // Instancia
-        arr2Dint = new int[2][2];
-        // Inicializa
-        arr2Dint[0][0] = 1;
-        arr2Dint[0][1] = 2;
-        arr2Dint[1][0] = 3;
-        arr2Dint[1][1] = 4;
+    public int arr[][] = null;
 
-        System.out.println(Arrays.deepToString(arr2Dint));
+    // Construtor
+    public TwoDimensionArray(int numeroDeLinhas, int numeroDeColunas) {
+        this.arr = new int[numeroDeLinhas][numeroDeColunas];
+        for (int linha = 0; linha < arr.length; linha++) {
+            for (int coluna = 0; coluna < arr.length; coluna++) {
+                arr[linha][coluna] = Integer.MIN_VALUE;
+            }
+        }
+    }
+//    Inserindo valor na matriz
 
-        // Tudo junto
-        String s2DArray[][]={{"a","b"},{"c","d"}};
-
-        System.out.println(Arrays.deepToString(s2DArray));
+    public void inserindoValorNaMatriz(int linha, int coluna, int valor) {
+        try {
+            if (arr[linha][coluna] == Integer.MIN_VALUE) {
+                arr[linha][coluna] = valor;
+                System.out.println("Valor inserido com sucesso!");
+            } else {
+                System.out.println("Celula ocupada");
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Index invalido para uma matriz!");
+        }
     }
 }
