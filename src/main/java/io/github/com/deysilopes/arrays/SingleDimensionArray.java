@@ -45,4 +45,16 @@ public class SingleDimensionArray {
         }
         System.out.println(valueTosearch + " não encontrado!");
     }
+
+//    Deletar valor de um Array
+
+    public void deleteValue(int valueToDeleteIndex) {
+        try {
+            arr[valueToDeleteIndex] = Integer.MIN_VALUE;
+            System.out.println("Valor foi apagado com sucesso!");
+
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Valor inserido não está no range do array");
+        }
+    }
 }

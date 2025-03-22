@@ -24,6 +24,8 @@ public class App
 //        System.out.println(thirdElement);
 //        System.out.println("Array transversal");
 //        sda.transverseArr();
-        sda.searchArr(10);
+//        sda.searchArr(10);
+        sda.deleteValue(0);
+        System.out.println(sda.arr[0]);
     }
 }
