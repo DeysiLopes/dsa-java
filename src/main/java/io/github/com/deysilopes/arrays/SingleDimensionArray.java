@@ -33,4 +33,16 @@ public class SingleDimensionArray {
         }
 
     }
+
+//    Buscando elemento em um Array
+
+    public void searchArr(int valueTosearch) {
+        for (int i = 0; i < arr.length; i++){
+            if(arr[i] == valueTosearch){
+                System.out.println("Valor encontrado no index: " + i);
+                return;
+            }
+        }
+        System.out.println(valueTosearch + " não encontrado!");
+    }
 }
