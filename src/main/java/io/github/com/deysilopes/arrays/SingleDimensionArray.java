@@ -21,5 +21,16 @@ public class SingleDimensionArray {
             System.out.println("Index do vetor invalido!");
         }
     }
+// Array transversal
 
+    public void transverseArr() {
+        try {
+            for (int i = 0; i< arr.length; i++) {
+                System.out.println(arr[i] + " " );
+            }
+        } catch (Exception e ) {
+            System.out.println("Array não existe mais!");
+        }
+
+    }
 }
