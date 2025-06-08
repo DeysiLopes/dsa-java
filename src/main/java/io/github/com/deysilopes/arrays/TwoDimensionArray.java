@@ -26,4 +26,15 @@ public class TwoDimensionArray {
             System.out.println("Index invalido para uma matriz!");
         }
     }
+
+    // acessando posicao no vetor
+
+    public void accessCell(int linha, int col) {
+        System.out.println("\nAcessando LInha#"+ linha + ", Coluna#" + col);
+        try {
+            System.out.println(" VAlor na posicao é: " + arr[linha][col]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Index invalido para uma matriz!");
+        }
+    }
 }
