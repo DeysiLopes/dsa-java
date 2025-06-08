@@ -46,4 +46,16 @@ public class TwoDimensionArray {
             System.out.println();
         }
     }
+    // Buscando a um valor dentro da matriz
+    public void buscandoValor(int value){
+        for(int linha=0; linha < arr.length; linha++){
+            for(int col=0; col<arr[0].length; col++){
+                if (arr[linha][col] == value){
+                    System.out.println("O numero foi encontrado nessa linha: "+ linha + " e nessa coluna: " + col);
+                    return;
+                }
+            }
+        }
+        System.out.println("O numero nao foi encontrado!");
+    }
 }
