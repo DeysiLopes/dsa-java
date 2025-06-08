@@ -16,7 +16,9 @@ public class App {
         sda.inserindoValorNaMatriz(1,0,30);
         sda.inserindoValorNaMatriz(2,0,40);
 
-        sda.buscandoValor(50);
+        System.out.println(Arrays.deepToString(sda.arr));
+        sda.apagandoValordaMatriz(0,0);
+        System.out.println(Arrays.deepToString(sda.arr));
 
     }
 }

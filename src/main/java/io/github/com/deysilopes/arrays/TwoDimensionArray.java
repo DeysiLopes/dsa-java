@@ -58,4 +58,14 @@ public class TwoDimensionArray {
         }
         System.out.println("O numero nao foi encontrado!");
     }
+
+    // apagando um valor da matriz
+    public void apagandoValordaMatriz(int linha, int col){
+        try {
+            System.out.println("Apagado com sucesso: " + arr[linha][col]);
+            arr[linha][col] = Integer.MIN_VALUE;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("O index ẽ invalido para a amtriz!");
+        }
+    }
 }
