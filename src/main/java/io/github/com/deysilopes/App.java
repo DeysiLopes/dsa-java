@@ -1,8 +1,6 @@
 package io.github.com.deysilopes;
 
-import io.github.com.deysilopes.arrays.TwoDimensionArray;
-
-import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Hello world!
@@ -10,15 +8,18 @@ import java.util.Arrays;
  */
 public class App {
     public static void main( String[] args ) {
-        TwoDimensionArray sda = new TwoDimensionArray(3,3);
-        sda.inserindoValorNaMatriz(0,0,10);
-        sda.inserindoValorNaMatriz(0,1,20);
-        sda.inserindoValorNaMatriz(1,0,30);
-        sda.inserindoValorNaMatriz(2,0,40);
+        Scanner console = new Scanner(System.in);
+        System.out.println("Quantos dias serão inseridos para o calculo de media? ");
+        int numDias = console.nextInt();
+        int sum = 0;
+        for (int i=1; i<=numDias; i++){
+            System.out.println("Dia " + i + " mãxima temperatura: ");
+            int next = console.nextInt();
+            sum += next;
+        }
 
-        System.out.println(Arrays.deepToString(sda.arr));
-        sda.apagandoValordaMatriz(0,0);
-        System.out.println(Arrays.deepToString(sda.arr));
-
+        double media = sum / numDias;
+        System.out.println();
+        System.out.println("A temperatura media é: " + media);
     }
 }
