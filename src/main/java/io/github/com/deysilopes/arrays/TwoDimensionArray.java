@@ -37,4 +37,13 @@ public class TwoDimensionArray {
             System.out.println("Index invalido para uma matriz!");
         }
     }
+// Percorrer matriz
+    public void percorrer2DMatriz() {
+        for(int linha = 0; linha < arr.length; linha++){
+            for(int col=0; col < arr[0].length; col++){
+                System.out.println(arr[linha][col] +" ");
+            }
+            System.out.println();
+        }
+    }
 }

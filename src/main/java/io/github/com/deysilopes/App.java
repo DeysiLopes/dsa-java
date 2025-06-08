@@ -13,7 +13,10 @@ public class App {
         TwoDimensionArray sda = new TwoDimensionArray(3,3);
         sda.inserindoValorNaMatriz(0,0,10);
         sda.inserindoValorNaMatriz(0,1,20);
-        sda.accessCell(0,1);
+        sda.inserindoValorNaMatriz(1,0,30);
+        sda.inserindoValorNaMatriz(2,0,40);
+        sda.percorrer2DMatriz();
+        //sda.accessCell(0,1);
         //System.out.println(Arrays.deepToString(sda.arr));
 
     }
